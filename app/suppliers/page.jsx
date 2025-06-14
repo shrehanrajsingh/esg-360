@@ -1,15 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../navbar";
-import { useState } from "react";
 import Footer from "../footer";
 
 export default function Suppliers() {
-  const [page, setPage] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
-  const [paginationShift, setPaginationShift] = useState(0);
+  // const [page, setPage] = useState(0);
+  // const [itemsPerPage, setItemsPerPage] = useState(5);
+  // const [paginationShift, setPaginationShift] = useState(0);
 
   return (
     <div className="">

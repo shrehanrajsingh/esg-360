@@ -1,27 +1,24 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../navbar";
 import { useState } from "react";
-import { useEffect, useRef } from "react";
 import AnalysisEnvironmentChart from "../components/analysisEnvironmentChart";
 import Footer from "../footer";
 
-const data = [
-  { month: "Jan", carbon: 5400, water: 980, waste: 750 },
-  { month: "Feb", carbon: 5100, water: 960, waste: 720 },
-  { month: "Mar", carbon: 5300, water: 950, waste: 700 },
-  { month: "Apr", carbon: 5600, water: 930, waste: 680 },
-  { month: "May", carbon: 5200, water: 920, waste: 670 },
-  { month: "Jun", carbon: 4900, water: 900, waste: 650 },
-  { month: "Jul", carbon: 4700, water: 880, waste: 640 },
-  { month: "Aug", carbon: 4500, water: 870, waste: 630 },
-  { month: "Sep", carbon: 4300, water: 860, waste: 620 },
-  { month: "Oct", carbon: 4100, water: 840, waste: 610 },
-  { month: "Nov", carbon: 3900, water: 820, waste: 600 },
-  { month: "Dec", carbon: 3700, water: 800, waste: 590 },
-];
+// const data = [
+//   { month: "Jan", carbon: 5400, water: 980, waste: 750 },
+//   { month: "Feb", carbon: 5100, water: 960, waste: 720 },
+//   { month: "Mar", carbon: 5300, water: 950, waste: 700 },
+//   { month: "Apr", carbon: 5600, water: 930, waste: 680 },
+//   { month: "May", carbon: 5200, water: 920, waste: 670 },
+//   { month: "Jun", carbon: 4900, water: 900, waste: 650 },
+//   { month: "Jul", carbon: 4700, water: 880, waste: 640 },
+//   { month: "Aug", carbon: 4500, water: 870, waste: 630 },
+//   { month: "Sep", carbon: 4300, water: 860, waste: 620 },
+//   { month: "Oct", carbon: 4100, water: 840, waste: 610 },
+//   { month: "Nov", carbon: 3900, water: 820, waste: 600 },
+//   { month: "Dec", carbon: 3700, water: 800, waste: 590 },
+// ];
 
 export default function Analysis() {
   /**

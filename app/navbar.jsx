@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import AvatarAVIF from "./assets/avatar.avif";
 import Avatar2JPG from "./assets/avatar-2.jpg";
 import { useState } from "react";
 
