@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="text-4xl text-gray-600 mb-4 text-center">
           This page is under development
         </h1>
-        <p>In the meantime, checkout:</p>
+        <p>In the meantime, check out:</p>
         <Link
           href="/suppliers"
           className="text-gray-100 px-4 py-2 bg-black rounded-lg"
