@@ -7,7 +7,7 @@ export default function Home() {
     <div className="">
       <Navbar />
       <div className="flex flex-col gap-4 justify-center items-center m-auto h-screen">
-        <h1 className="text-4xl text-gray-600 mb-4">
+        <h1 className="text-4xl text-gray-600 mb-4 text-center">
           This page is under development
         </h1>
         <p>In the meantime, checkout:</p>
