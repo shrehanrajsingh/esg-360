@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <p>
+              <p className="text-gray-800">
                 Subscribe to our newsletter
                 <br />
                 Get tips, technical guides, and best practices. Twice a month.
@@ -148,50 +148,32 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-2">
               <li>
-                <Link
-                  href="/dashboard"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Docs
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/reports"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Forum
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/analytics"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Professional Services
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/suppliers"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Premium Support
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/assessment"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Skills
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/benchmarking"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Status
                 </Link>
               </li>
@@ -204,50 +186,32 @@ export default function Footer() {
 
             <ul className="mt-4 space-y-2">
               <li>
-                <Link
-                  href="/dashboard"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   About
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/reports"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Customer Stories
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/analytics"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/suppliers"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/assessment"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Newsroom
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/benchmarking"
-                  className="text-gray-600 hover:text-gray-900"
-                >
+                <Link href="#" className="text-gray-600 hover:text-gray-900">
                   Social Impact
                 </Link>
               </li>

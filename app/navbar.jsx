@@ -23,7 +23,9 @@ export default function Navbar() {
             <rect x="20" y="30" width="20" height="20" fill="currentColor" />
           </svg>
         </div>
-        <h1 className="text-xl font-bold text-slate-800">ESG360</h1>
+        <Link href="/">
+          <h1 className="text-xl font-bold text-slate-800">ESG360</h1>
+        </Link>
       </div>
 
       {/* Desktop Navigation Links */}
