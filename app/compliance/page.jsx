@@ -138,7 +138,7 @@ export default function ComplianceOverview() {
           </div>
 
           {menu === "r" && (
-            <div className="mt-8 bg-white p-6 rounded-lg border-1 border-gray-300">
+            <div className="mt-8 bg-white rounded-lg">
               {/* desktop */}
               <div className="hidden md:block">
                 <div className="mb-4 flex justify-between items-center">
@@ -404,7 +404,7 @@ export default function ComplianceOverview() {
 
           {menu === "a" && (
             <div className="mt-8">
-              <div className="bg-white p-6 rounded-lg text-center text-gray-500 border-1 border-gray-300">
+              <div className="bg-white rounded-lg text-center text-gray-500">
                 {/* desktop */}
                 <div className="hidden md:block">
                   <div className="mb-4 flex justify-between items-center">
@@ -415,7 +415,7 @@ export default function ComplianceOverview() {
                       <input
                         type="text"
                         placeholder="Search audits..."
-                        className="px-3 py-2 border border-gray-300 rounded-md text-sm outline-none"
+                        className="px-3 py-2 text-black border border-gray-300 rounded-md text-sm outline-none"
                       />
                       <button className="bg-gray-800 text-white px-4 py-2 rounded-md text-sm hover:bg-gray-700 cursor-pointer">
                         Add New
@@ -672,7 +672,7 @@ export default function ComplianceOverview() {
           {menu === "c" && (
             <div className="mt-8">
               <div>
-                <div className="bg-white p-6 rounded-lg border-1 border-gray-300">
+                <div className="bg-white rounded-lg">
                   {/* desktop */}
                   <div className="hidden md:block">
                     <div className="mb-4 flex justify-between items-center">
