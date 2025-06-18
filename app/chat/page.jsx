@@ -2,7 +2,7 @@
 
 import localFont from "next/font/local";
 import "./style.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Navbar from "../navbar";
 
 const agileFont = localFont({
@@ -10,7 +10,7 @@ const agileFont = localFont({
 });
 
 export default function Chat() {
-  const [showLoader, setShowLoader] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
   const [messages, setMessages] = useState([
     {
       from: "AI",
@@ -43,7 +43,7 @@ export default function Chat() {
         },
       ]);
       setAiIsAnswering(false);
-    }, 1);
+    }, 2000);
   };
 
   const handleSubmit = (e) => {
@@ -68,8 +68,16 @@ export default function Chat() {
     }
   };
 
+  const messageEndRef = useRef(null);
+
+  useEffect(() => {
+    if (messageEndRef.current) {
+      messageEndRef.current.scrollTop = messageEndRef.current.scrollHeight;
+    }
+  }, [messages]);
+
   return (
-    <div>
+    <div className="max-h-screen overflow-hidden">
       <div
         className={`w-full h-screen fixed top-0 left-0 bg-gradient-to-tr from-slate-800 to-gray-800 flex flex-col justify-center items-center translate-all duration-200 ${
           showLoader ? "" : "hidden"
@@ -94,29 +102,31 @@ export default function Chat() {
       </div>
 
       <div className="bg-gradient-to-tr from-slate-800 to-gray-800 min-h-screen grid grid-cols-6 text-slate-200">
-        <div className="col-span-1 pt-6">
+        <div className="col-span-1 pt-6 bg-black/40">
           <h1 className="px-4 text-3xl font-light mb-4">ESG360</h1>
 
           <div className="">
             <h1 className="pl-4 font-light text-xl mb-4">Past Conversations</h1>
 
             <div>
-              <div className="px-4 py-2 my-2 hover:bg-black/20 cursor-pointer">
-                <h1 className="text-lg text-white/80">
+              <div className="px-4 py-2 my-2 hover:bg-black cursor-pointer">
+                <h1 className="text-lg text-white/80 mb-1">
                   Supplier Risk Assessment
                 </h1>
                 <span className="text-sm text-gray-400">
                   26-07-2024 10:30 AM
                 </span>
               </div>
-              <div className="px-4 py-2 my-2 hover:bg-black/20 cursor-pointer">
-                <h1 className="text-lg text-white/80">ESG Compliance Check</h1>
+              <div className="px-4 py-2 my-2 hover:bg-black cursor-pointer">
+                <h1 className="text-lg text-white/80 mb-1">
+                  ESG Compliance Check
+                </h1>
                 <span className="text-sm text-gray-400">
                   25-07-2024 03:45 PM
                 </span>
               </div>
-              <div className="px-4 py-2 my-2 hover:bg-black/20 cursor-pointer">
-                <h1 className="text-lg text-white/80">
+              <div className="px-4 py-2 my-2 hover:bg-black cursor-pointer">
+                <h1 className="text-lg text-white/80 mb-1">
                   Supply Chain Optimization
                 </h1>
                 <span className="text-sm text-gray-400">
@@ -127,9 +137,15 @@ export default function Chat() {
           </div>
         </div>
         <div className="col-span-5">
-          <div className="grid grid-rows-8 h-full px-4">
-            <div className="row-span-7 overflow-y-scroll">
-              <div className="flex flex-col gap-4 py-8 h-full overflow-y-auto">
+          <div className="grid grid-rows-8 h-full px-8">
+            <div
+              className="row-span-7 overflow-y-scroll max-h-[80vh] mt-4 p-4 rounded-xl"
+              id="message-section"
+            >
+              <div
+                className="flex flex-col gap-4 py-8 h-full overflow-y-auto"
+                ref={messageEndRef}
+              >
                 {messages.map((message, index) => (
                   <div key={index}>
                     <div
@@ -185,7 +201,7 @@ export default function Chat() {
                             </button>
                             <button
                               className="bg-gray-600 hover:bg-gray-500 transition-colors p-3 rounded-lg text-white/90 text-sm cursor-pointer border border-gray-500"
-                              onClick={(e) =>
+                              onClick={(e) => {
                                 setMessages((msg) => [
                                   ...msg,
                                   {
@@ -193,14 +209,15 @@ export default function Chat() {
                                     time: new Date().toLocaleTimeString(),
                                     content: "Carbon Footprint Analysis",
                                   },
-                                ])
-                              }
+                                ]);
+                                think("Carbon Footprint Analysis");
+                              }}
                             >
                               Carbon Footprint Analysis
                             </button>
                             <button
                               className="bg-gray-600 hover:bg-gray-500 transition-colors p-3 rounded-lg text-white/90 text-sm cursor-pointer border border-gray-500"
-                              onClick={(e) =>
+                              onClick={(e) => {
                                 setMessages((msg) => [
                                   ...msg,
                                   {
@@ -208,14 +225,16 @@ export default function Chat() {
                                     time: new Date().toLocaleTimeString(),
                                     content: "Supply Chain Risk Assessment",
                                   },
-                                ])
-                              }
+                                ]);
+
+                                think("Supply Chain Risk Assessment");
+                              }}
                             >
                               Supply Chain Risk Assessment
                             </button>
                             <button
                               className="bg-gray-600 hover:bg-gray-500 transition-colors p-3 rounded-lg text-white/90 text-sm cursor-pointer border border-gray-500"
-                              onClick={(e) =>
+                              onClick={(e) => {
                                 setMessages((msg) => [
                                   ...msg,
                                   {
@@ -223,14 +242,16 @@ export default function Chat() {
                                     time: new Date().toLocaleTimeString(),
                                     content: "Sustainability Reporting",
                                   },
-                                ])
-                              }
+                                ]);
+
+                                think("Sustainability Reporting");
+                              }}
                             >
                               Sustainability Reporting
                             </button>
                             <button
                               className="bg-gray-600 hover:bg-gray-500 transition-colors p-3 rounded-lg text-white/90 text-sm cursor-pointer border border-gray-500"
-                              onClick={(e) =>
+                              onClick={(e) => {
                                 setMessages((msg) => [
                                   ...msg,
                                   {
@@ -238,14 +259,16 @@ export default function Chat() {
                                     time: new Date().toLocaleTimeString(),
                                     content: "Social Impact Metrics",
                                   },
-                                ])
-                              }
+                                ]);
+
+                                think("Social Impact Metrics");
+                              }}
                             >
                               Social Impact Metrics
                             </button>
                             <button
                               className="bg-gray-600 hover:bg-gray-500 transition-colors p-3 rounded-lg text-white/90 text-sm cursor-pointer border border-gray-500"
-                              onClick={(e) =>
+                              onClick={(e) => {
                                 setMessages((msg) => [
                                   ...msg,
                                   {
@@ -253,8 +276,10 @@ export default function Chat() {
                                     time: new Date().toLocaleTimeString(),
                                     content: "Governance Best Practices",
                                   },
-                                ])
-                              }
+                                ]);
+
+                                think("Governance Best Practices");
+                              }}
                             >
                               Governance Best Practices
                             </button>
@@ -264,6 +289,33 @@ export default function Chat() {
                     )}
                   </div>
                 ))}
+
+                {aiIsAnswering ? (
+                  <div>
+                    <div className="flex justify-start">
+                      <div className="max-w-1/2 min-w-1/12 rounded-2xl p-4 text-white/80 bg-gray-700">
+                        <div className="flex items-center mb-2">
+                          <span className="font-medium mr-2">
+                            ESG Assistant
+                          </span>
+                        </div>
+                        <div className="flex items-center space-x-1">
+                          <div className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"></div>
+                          <div
+                            className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
+                            style={{ animationDelay: "0.2s" }}
+                          ></div>
+                          <div
+                            className="w-2 h-2 rounded-full bg-gray-400 animate-bounce"
+                            style={{ animationDelay: "0.4s" }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
             <form action="" onSubmit={handleSubmit}>
@@ -272,7 +324,7 @@ export default function Chat() {
                   type="text"
                   placeholder="Ask anything"
                   id="prompt-text"
-                  className="w-full border border-gray-600 p-4 text-2xl font-light mb-4 outline-none rounded-xl"
+                  className="w-full bg-gray-600/40 p-4 text-2xl font-light mb-4 outline-none rounded-xl"
                   onChange={(e) => {
                     setCurrInput(e.currentTarget.value);
                   }}
