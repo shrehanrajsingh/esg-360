@@ -4,13 +4,14 @@ import localFont from "next/font/local";
 import "./style.css";
 import { useEffect, useRef, useState } from "react";
 import Navbar from "../navbar";
+import axios from "axios";
 
 const agileFont = localFont({
   src: "../assets/agile.ttf",
 });
 
 export default function Chat() {
-  const [showLoader, setShowLoader] = useState(true);
+  const [showLoader, setShowLoader] = useState(false);
   const [messages, setMessages] = useState([
     {
       from: "AI",
@@ -31,19 +32,41 @@ export default function Chat() {
     return () => clearTimeout(timeout);
   }, []);
 
-  const think = (msg) => {
+  const think = async (msg) => {
     setAiIsAnswering(true);
-    setTimeout(() => {
-      setMessages((messages) => [
-        ...messages,
-        {
-          from: "AI",
-          content: `I did not understand your query: "${msg}"`,
-          time: new Date().toLocaleTimeString(),
-        },
-      ]);
-      setAiIsAnswering(false);
-    }, 2000);
+    // setTimeout(() => {
+    //   setMessages((messages) => [
+    //     ...messages,
+    //     {
+    //       from: "AI",
+    //       content: `I did not understand your query: "${msg}"`,
+    //       time: new Date().toLocaleTimeString(),
+    //     },
+    //   ]);
+    //   setAiIsAnswering(false);
+    // }, 2000);
+
+    const resp = await axios({
+      method: "POST",
+      url: "/api/chat",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: {
+        prompt: msg,
+      },
+    });
+
+    setMessages((msgs) => [
+      ...msgs,
+      {
+        from: "AI",
+        content: resp.data.text,
+        time: new Date().toLocaleTimeString(),
+      },
+    ]);
+
+    setAiIsAnswering(false);
   };
 
   const handleSubmit = (e) => {
@@ -329,6 +352,7 @@ export default function Chat() {
                     setCurrInput(e.currentTarget.value);
                   }}
                   autoComplete="off"
+                  autoFocus={true}
                 />
                 <button
                   type="submit"
