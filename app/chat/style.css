@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+    --animate-move: move 1s ease-in-out infinite;
+    --animate-move2: move2 1s ease-in-out infinite;
+
+    @keyframes move {
+        0% {
+            left: 24px;
+            bottom: 0;
+        }
+
+        25% {
+            left: 0;
+            bottom: 0;
+        }
+
+        50% {
+            bottom: 24px;
+            left: 0;
+        }
+
+        75% {
+            left: 24px;
+            bottom: 24px;
+        }
+
+        100% {
+            left: 24px;
+            bottom: 0;
+        }
+    }
+
+    @keyframes move2 {
+        0% {
+            left: 0;
+            top: 0;
+        }
+
+        25% {
+            left: 24px;
+            top: 0;
+        }
+
+        50% {
+            top: 24px;
+            left: 24px;
+        }
+
+        75% {
+            left: 0px;
+            top: 24px;
+        }
+
+        100% {
+            left: 0;
+            top: 0;
+        }
+    }
+}
