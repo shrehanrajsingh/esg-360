@@ -11,7 +11,7 @@ const agileFont = localFont({
 });
 
 export default function Chat() {
-  const [showLoader, setShowLoader] = useState(false);
+  const [showLoader, setShowLoader] = useState(true);
   const [messages, setMessages] = useState([
     {
       from: "AI",
