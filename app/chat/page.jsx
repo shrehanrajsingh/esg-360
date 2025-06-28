@@ -3,7 +3,6 @@
 import localFont from "next/font/local";
 import "./style.css";
 import { useEffect, useRef, useState } from "react";
-import Navbar from "../navbar";
 import axios from "axios";
 import Link from "next/link";
 

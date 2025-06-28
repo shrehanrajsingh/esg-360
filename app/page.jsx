@@ -10,6 +10,7 @@ import LandingMobileJPG from "./assets/landing-mobile.jpg";
 // import GrassJPG from "./assets/grass.jpg";
 // import Grass2JPG from "./assets/grass2.jpg";
 import Grass3JPG from "./assets/grass3.jpg";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -727,18 +728,18 @@ export default function Home() {
                   journey.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
-                    href="/dashboard"
+                  <Link
+                    href="#"
                     className="py-3 px-6 bg-white text-green-700 hover:bg-slate-100 font-medium rounded-lg transition-all text-center"
                   >
                     Get Started
-                  </a>
-                  <a
-                    href="/contact"
+                  </Link>
+                  <Link
+                    href="#"
                     className="py-3 px-6 border border-white text-white hover:bg-white/10 font-medium rounded-lg transition-all text-center"
                   >
                     Request a Demo
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div
