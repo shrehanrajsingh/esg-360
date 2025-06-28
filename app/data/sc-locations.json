@@ -1,0 +1,62 @@
+[
+  { "name": "HQ", "coordinates": [-74.006, 40.7128], "risk": "low" },
+  { "name": "Factory A", "coordinates": [121.4737, 31.2304], "risk": "medium" },
+  { "name": "Factory B", "coordinates": [55.2708, 25.2048], "risk": "high" },
+  { "name": "Supplier", "coordinates": [13.405, 52.52], "risk": "low" },
+  {
+    "name": "Distribution Center",
+    "coordinates": [-118.2437, 34.0522],
+    "risk": "medium"
+  },
+  { "name": "Research Lab", "coordinates": [-0.1278, 51.5074], "risk": "low" },
+  { "name": "Factory C", "coordinates": [139.6917, 35.6895], "risk": "high" },
+  {
+    "name": "Regional Office",
+    "coordinates": [-79.3832, 43.6532],
+    "risk": "low"
+  },
+  { "name": "Warehouse", "coordinates": [2.3522, 48.8566], "risk": "medium" },
+  {
+    "name": "Data Center",
+    "coordinates": [-122.3321, 47.6062],
+    "risk": "medium"
+  },
+  { "name": "Factory D", "coordinates": [77.1025, 28.7041], "risk": "high" },
+  { "name": "Logistics Hub", "coordinates": [103.8198, 1.3521], "risk": "low" },
+  {
+    "name": "Assembly Plant",
+    "coordinates": [-58.3816, -34.6037],
+    "risk": "medium"
+  },
+  { "name": "R&D Center", "coordinates": [4.9041, 52.3676], "risk": "low" },
+  {
+    "name": "Factory E",
+    "coordinates": [151.2093, -33.8688],
+    "risk": "medium"
+  },
+  { "name": "Sales Office", "coordinates": [18.4241, -33.9249], "risk": "low" },
+  {
+    "name": "Production Facility",
+    "coordinates": [37.6173, 55.7558],
+    "risk": "high"
+  },
+  { "name": "Tech Campus", "coordinates": [-122.0839, 37.3861], "risk": "low" },
+  {
+    "name": "Manufacturing Plant",
+    "coordinates": [126.978, 37.5665],
+    "risk": "medium"
+  },
+  {
+    "name": "Distribution Hub",
+    "coordinates": [144.9631, -37.8136],
+    "risk": "medium"
+  },
+  { "name": "Factory F", "coordinates": [28.9784, 41.0082], "risk": "high" },
+  { "name": "Support Center", "coordinates": [72.8777, 19.076], "risk": "low" },
+  {
+    "name": "Processing Plant",
+    "coordinates": [-43.1729, -22.9068],
+    "risk": "medium"
+  },
+  { "name": "Solar Farm", "coordinates": [31.2357, 30.0444], "risk": "low" }
+]
