@@ -53,12 +53,18 @@ export default function Home() {
             Gain actionable insights, ensure transparency, and drive sustainable
             business practices across your operations.
           </p>
-          <button className="ml-4 py-2 px-4 bg-gradient-to-tr from-green-700 to-emerald-600 hover:text-white text-slate-200 cursor-pointer rounded-lg">
+          <Link
+            href={"/chat"}
+            className="ml-4 py-2 px-4 bg-gradient-to-tr from-green-700 to-emerald-600 hover:text-white text-slate-200 cursor-pointer rounded-lg"
+          >
             Learn More
-          </button>
-          <button className="ml-4 py-2 px-4 bg-gradient-to-tr from bg-green-700 to-emerald-600 hover:text-white text-slate-200 cursor-pointer rounded-lg">
+          </Link>
+          <Link
+            href={"/dashboard"}
+            className="ml-4 py-2 px-4 bg-gradient-to-tr from bg-green-700 to-emerald-600 hover:text-white text-slate-200 cursor-pointer rounded-lg"
+          >
             Go to Dashboard
-          </button>
+          </Link>
         </div>
       </div>
 
