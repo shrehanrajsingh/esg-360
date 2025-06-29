@@ -95,6 +95,29 @@ Our platform features an intelligent chatbot built on Hugging Face's `deepset/ro
 
 ---
 
+## 👥 Authors & Contributors
+
+<div class="flex flex-wrap gap-6 my-6">
+    <div class="flex-1 min-w-[250px] bg-gray-50 p-5 rounded-lg shadow-sm">
+        <h3>Shrehan Raj Singh</h3>
+        <div class="mt-3">
+            <a href="mailto:shrehanrajsingh.24@kgpian.iitkgp.ac.in">📧 Email</a> • 
+            <a href="https://github.com/shrehanrajsingh">GitHub</a> • 
+            <a href="https://linkedin.com/in/shrehan-raj-singh-28a1a0242/">LinkedIn</a>
+        </div>
+    </div>
+    <div class="flex-1 min-w-[250px] bg-gray-50 p-5 rounded-lg shadow-sm">
+        <h3>Prahana Mondal</h3>
+        <div class="mt-3">
+            <a href="mailto:prahana@iitg.ac.in">📧 Email</a> • 
+            <a href="https://github.com/Prahana21">GitHub</a> • 
+            <a href="https://linkedin.com/in/prahana-mondal-710217310">LinkedIn</a>
+        </div>
+    </div>
+</div>
+
+---
+
 <div align="center">
     <p><strong>ESG 360: Transforming Sustainability Management for the Enterprise</strong></p>
     <p>Powered by cutting-edge technology. Driven by sustainable values.</p>
